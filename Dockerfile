@@ -1,8 +1,10 @@
 
-FROM openjdk:8
+# FIXED: Replaced the deleted openjdk:8 image with the supported Eclipse Temurin Java 8 runtime
+FROM eclipse-temurin:8-jre-jammy
 
 EXPOSE 8080
 
-ADD target/demo-application.jar demo-application.jar
-# Execute the Java application inside the container environment
-ENTRYPOINT ["java", "-jar", "/demo-application.jar"]
+# Copies your compiled project jar file from the target directory
+COPY target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
