@@ -3,6 +3,7 @@ FROM eclipse-temurin:25-jre-jammy
 
 EXPOSE 8282
 
+
 # Copies your compiled project jar file from the target directory
 COPY target/*.jar app.jar
 
