@@ -1,5 +1,5 @@
-# FIXED: Upgraded base image from Java 8 to Java 17 to match your Spring Boot compilation target
-FROM eclipse-temurin:17-jre-jammy
+# FIXED: Upgraded base image from Java 17 to Java 25 to match your compilation target (69.0)
+FROM eclipse-temurin:25-jre-jammy
 
 EXPOSE 8282
 
